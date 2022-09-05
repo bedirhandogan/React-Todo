@@ -1,0 +1,33 @@
+:root {
+    --background-color-primary: #efefef;
+    --background-color-second: #ffffff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-primary);
+}
+
+.App {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App .container {
+    width: 550px;
+    height: 85vh;
+    background-color: var(--background-color-second);
+    border-radius: 10px;
+}
+
+@media (max-width: 580px) {
+    .App .container {
+        width: 100%;
+        height: 100vh;
+    }
+}

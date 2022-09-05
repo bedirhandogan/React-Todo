@@ -1,7 +1,11 @@
+import 'assets/styles/styles.css';
+
 function App() {
   return (
-    <div>
+    <div className={'App'}>
+      <div className={'container'}>
 
+      </div>
     </div>
   );
 }
