@@ -1,5 +1,6 @@
 import 'assets/styles/styles.css';
 import Form from "components/Form";
+import List from "components/List";
 import {useEffect, useState} from "react";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     return (<div className={'App'}>
         <div className={'container'}>
             <Form value={value} setValue={setValue}/>
+            <List />
         </div>
     </div>);
 }

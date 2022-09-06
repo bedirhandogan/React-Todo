@@ -36,7 +36,7 @@
 .form-container input[type="text"] {
     all: unset;
     width: 100%;
-    border: 2px solid #00a6e3;
+    border: 2px solid var(--color-blue);
     padding: 10px;
     box-sizing: border-box;
     font-size: 14px;
@@ -44,8 +44,8 @@
 
 .form-container button[type="submit"] {
     all: unset;
-    border: 2px solid #00a6e3;
-    background-color: #00a6e3;
+    border: 2px solid var(--color-blue);
+    background-color: var(--color-blue);
     color: white;
     width: 20%;
     height: 100%;

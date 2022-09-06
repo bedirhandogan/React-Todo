@@ -3,6 +3,7 @@
     --background-color-second: #ffffff;
 
     --color-gray: #676767;
+    --color-blue: #00a6e3;
 }
 
 html, body {
@@ -29,6 +30,10 @@ html, body {
     padding: 25px 25px;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 @media (max-width: 580px) {
