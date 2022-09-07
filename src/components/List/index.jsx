@@ -1,12 +1,10 @@
 import './styles.css';
 import Item from "components/List/Item";
 
-function List() {
-    const storage = JSON.parse(localStorage.getItem('tasks'));
-
+function List({deleteItem, tasks}) {
     return (
         <div className={'list-container'}>
-            { storage && storage.map(item => <Item id={item.id} value={item.value} done={item.done} key={item.id} />) }
+            { tasks?.map(item => <Item item={item} deleteItem={deleteItem} key={item.id} />) }
         </div>
     )
 }
