@@ -1,10 +1,10 @@
 import './styles.css';
 import Item from "components/List/Item";
 
-function List({deleteItem, tasks}) {
+function List({deleteItem, itemCompleted, tasks}) {
     return (
         <div className={'list-container'}>
-            { tasks?.map(item => <Item item={item} deleteItem={deleteItem} key={item.id} />) }
+            { tasks && tasks.map(item => <Item item={item} deleteItem={deleteItem} itemCompleted={itemCompleted} key={item.id} />) }
         </div>
     )
 }

@@ -25,6 +25,15 @@
     word-break: break-word;
 }
 
+.list-container .item.done__true {
+    background-color: rgba(0, 166, 227, 0.15);
+}
+
+.list-container .item.done__true .value {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
 .list-container .item .value .more {
     cursor: pointer;
     font-weight: bold;
