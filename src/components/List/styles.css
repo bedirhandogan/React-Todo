@@ -21,7 +21,7 @@
 
 .list-container .item .value {
     font-size: 14px;
-    max-width: 300px;
+    max-width: 400px;
     word-break: break-word;
 }
 
@@ -32,6 +32,15 @@
 .list-container .item.done__true .value {
     text-decoration: line-through;
     opacity: 0.7;
+}
+
+.list-container .item.edit__mode {
+    background-color: rgba(0, 0, 0, 0.17);
+}
+
+.list-container .item .value input {
+    all: unset;
+    width: 350px;
 }
 
 .list-container .item .value .more {

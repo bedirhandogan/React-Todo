@@ -50,10 +50,26 @@ function App() {
         });
     }
 
+    function editValue(event, id) {
+        event.preventDefault(); // default işlemlere engel oluyorum
+        // state'in verdiği item parametresini id ile eşitliyorum ve dönen index'i alıyorum
+        const index = tasks.findIndex(item => item.id === id);
+        setTasks(prevState => {
+            // state'in içinde ki verilerden index'e eşit olan objemi alıyorum
+            const item = prevState[index];
+            // 1. virgül; 0 dan id değerime eşit olan index'e kadar olan tüm objeleri set ediyorum
+            // 2. virgül; item'ın içinde gelen objemi alıyorum ve yeni değerini set ediyorum
+            // 3. virgül; state den gelen objelerimi index değerimden sonrakileri set ediyorum
+            return [...prevState.slice(0, index),
+                {...item, value: event.target[0].value },
+                ...prevState.slice(index + 1)];
+        });
+    }
+
     return (<div className={'App'}>
         <div className={'container'}>
             <Form value={value} setValue={setValue} submitHandle={submitHandle}/>
-            <List deleteItem={deleteItem} itemCompleted={itemCompleted} tasks={tasks}/>
+            <List deleteItem={deleteItem} itemCompleted={itemCompleted} editValue={editValue} tasks={tasks}/>
         </div>
     </div>);
 }
